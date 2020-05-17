@@ -23,13 +23,12 @@ data = []
 next_el = True
 number = 1
 while next_el != 'quit':
-
     list_of_goods = {'название': input('Введите название товара: '),
                      'цена': (input('Введите стоимость товара : ')),
                      'количество': (input('Введите количество товара: ')),
                      'единица': input('Введите единицу измерения: ')}
 
-    good = (number, list_of_goods)
+    good = (number, list_of_goods.copy())
     data.append(good)
 
     next_el = input('*** Нажмите любую клавишу для продолжения или наберите quit для завершения *** ')
